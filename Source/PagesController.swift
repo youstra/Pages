@@ -29,7 +29,7 @@ import UIKit
   }
 
   public var showPageControl = true
-  private lazy var pages = Array<UIViewController>()
+  public lazy var pages = Array<UIViewController>()
 
   public var pagesCount: Int {
     return pages.count
@@ -48,12 +48,6 @@ import UIKit
   }()
 
   public private(set) var pageControl: UIPageControl?
-
-    public convenience override init(transitionStyle style: UIPageViewController.TransitionStyle, navigationOrientation: UIPageViewController.NavigationOrientation, options: [UIPageViewController.OptionsKey : Any]? = nil) {
-        self.init(transitionStyle: style, navigationOrientation: navigationOrientation, options: options)
-        add(pages)
-    }
-    
 
   open override func viewDidLoad() {
     super.viewDidLoad()
